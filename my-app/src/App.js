@@ -1,56 +1,76 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Loadable from 'react-loadable';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Loading from './components/Loading';
+import Home from './pages/Home';
+import Login from './pages/Login';
+
+// const LoginMain = Loadable({
+//   loader: () => import('./pages/LoginMain'),
+//   loading: Loading
+// });
+
+// const Navbar = Loadable({
+//   loader: () => import('./components/Navbar'),
+//   loading: Loading
+// });
+
+// const Home = Loadable({
+//   loader: () => import('./pages/Home'),
+//   loading: Loading
+// });
+
+const MovieInfo = Loadable({
+  loader: () => import('./pages/MovieInfo'),
+  loading: Loading
+});
+
+// const Register = Loadable({
+//   loader: () => import('./pages/Register'),
+//   loading: Loading
+// });
+
+
+// const Profile = Loadable({
+//   loader: () => import('./pages/Profile'),
+//   loading: Loading
+// });
+
+const Favorites = Loadable({
+  loader: () => import('./pages/Favorites'),
+  loading: Loading,
+  delay: 60
+});
+
+const NotFound = Loadable({
+  loader: () => import('./pages/404'),
+  loading: Loading
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className="Movies-app">
+      <Router>
+        {/* <Navbar /> */}
+        <div className="page-content">
+          <Switch>
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/" component={Home} />
+              {/* <Route path="/profile" component={Profile} /> */}
+               {/* <Route path="/register" component={Register} /> */}
+              <Route path="/details/:id" component={MovieInfo} />
+              <Route path="/favorite-movies" component={Favorites} />
+              <Route path="*" component={NotFound} />
+          </Switch>
+        </div>
+      </Router>
+      <ToastContainer />
     </div>
   );
 }
