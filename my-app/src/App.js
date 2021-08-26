@@ -10,6 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Loading from './components/Loading';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Profile from './pages/Profile';
+import Register from './pages/Register';
 
 // const LoginMain = Loadable({
 //   loader: () => import('./pages/LoginMain'),
@@ -62,8 +64,8 @@ function App() {
           <Switch>
               <Route exact path="/login" component={Login} />
               <Route exact path="/" component={Home} />
-              {/* <Route path="/profile" component={Profile} /> */}
-               {/* <Route path="/register" component={Register} /> */}
+              <Route path="/profile" component={Profile} />
+               <Route path="/register" component={Register} />
               <Route path="/details/:id" component={MovieInfo} />
               <Route path="/favorite-movies" component={Favorites} />
               <Route path="*" component={NotFound} />
