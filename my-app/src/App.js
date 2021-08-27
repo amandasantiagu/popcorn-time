@@ -65,7 +65,7 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/" component={Home} />
               <Route path="/profile" component={Profile} />
-               <Route path="/register" component={Register} />
+              <Route path="/register" component={Register} />
               <Route path="/details/:id" component={MovieInfo} />
               <Route path="/favorite-movies" component={Favorites} />
               <Route path="*" component={NotFound} />
