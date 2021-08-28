@@ -1,12 +1,12 @@
 import React from 'react'
-import { GiPopcorn } from 'react-icons/gi'
+import logo from '../../assets/images/pipoca.png'
 import { ButtonStyle, CardLogin, InputLogin, InputText, LoginStyle, LoginText } from '../Login/loginStyles'
 
 const Register = () => {
     return (
         <LoginStyle>
             <CardLogin>
-                <GiPopcorn style={{color: 'green'}} size={50}/>
+                <img src={logo} alt="Logo" style={{width: '25%', marginBottom: '12px'}}/>
                 <LoginText>Crie a sua Conta!</LoginText>
                 <InputText> E-mail</InputText>
                 <InputLogin type="text" />

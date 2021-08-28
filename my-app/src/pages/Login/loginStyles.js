@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const LoginStyle = styled.main`
     width: 100vw;
     height: 100vh;
-    background-color: #A62626;
+    background-color: #650315;
     display: flex;
     align-items: center;
     align-self: center;

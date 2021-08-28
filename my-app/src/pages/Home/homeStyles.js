@@ -9,7 +9,7 @@ export const HomeStyled = styled.body`
 export const Header = styled.header`
     width: 100%;
     height: 10%;
-    background-color: #8C1127;
+    background-color: #650315;
     display: flex;
 `
 export const ButtonLogin = styled.button`
