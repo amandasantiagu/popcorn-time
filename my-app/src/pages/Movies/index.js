@@ -1,14 +1,12 @@
 import React from 'react'
 import HeaderStyledComponent from '../../components/HeaderMain/HeaderMain'
-import { ProfileStyle } from './profileStyle'
 
-const Profile = () => {
+const Movies = () => {
     return (
         <>
             <HeaderStyledComponent />
-            <ProfileStyle></ProfileStyle>
         </>
     )
 }
 
-export default Profile
+export default Movies
