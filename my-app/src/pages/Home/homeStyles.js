@@ -26,7 +26,7 @@ export const ButtonLogin = styled.button`
 export const ButtonRegister = styled.button`
     color: white;
     font-size: 0.7em;
-    width: 8%;
+    width: 90%;
     height: 55%;
     background-color: transparent;
     margin-top: 12px;

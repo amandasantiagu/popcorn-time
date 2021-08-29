@@ -50,8 +50,8 @@ export const InputLogin = styled.input`
 export const ButtonStyle = styled.button`
     color: white;
     font-size: 0.7em;
-    width: 75%;
-    height: 7%;
+    width: 100%;
+    height: 70%;
     background-color: #008C49;
     margin-top: 12px;
     margin-bottom: 12px;

@@ -1,6 +1,7 @@
 import React from 'react'
 import { ButtonStyle, CardLogin, InputLogin, InputText, LoginStyle, LoginText } from './loginStyles'
 import logo from '../../assets/images/pipoca.png'
+import { Link } from 'react-router-dom'
 
 
 const Login = () => {
@@ -14,7 +15,9 @@ const Login = () => {
                 <InputLogin type="text" />
                 <InputText> Senha </InputText>             
                 <InputLogin type="password" />
-                <ButtonStyle> ENTRAR </ButtonStyle>
+                <Link to={'/favorites'}>
+                    <ButtonStyle> ENTRAR </ButtonStyle>
+                </Link>
                 <InputText>Não possui Conta?</InputText>
             </CardLogin>
         </LoginStyle>

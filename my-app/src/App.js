@@ -42,10 +42,10 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/" component={Home} />
               <Route path="/profile" component={Profile} />
-              <Route path="/movie" component={Movies} />
+              <Route path="/movies" component={Movies} />
               <Route path="/register" component={Register} />
               <Route path="/details/:id" component={MovieInfo} />
-              <Route path="/favorite-movies" component={Favorites} />
+              <Route path="/favorites" component={Favorites} />
               <Route path="*" component={NotFound} />
           </Switch>
         </div>
