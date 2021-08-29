@@ -3,13 +3,16 @@ import {Redirect} from 'react-router-dom';
 import {fetchMovies} from '../../services/fetchApi';
 import {BsStarFill} from 'react-icons/bs';
 import {CgAwards} from 'react-icons/cg';
-import {BiCameraMovie, BiPencil, BiDollarCircle, BiWorld} from 'react-icons/bi';
+import {BiPencil, BiDollarCircle, BiWorld} from 'react-icons/bi';
+import { MdMovieFilter } from 'react-icons/md';
 import {GiDirectorChair} from 'react-icons/gi';
 import {MdAssignmentTurnedIn, MdNewReleases} from 'react-icons/md';
 import {FaUsers} from 'react-icons/fa';
 import {CgTimelapse} from 'react-icons/cg';
-import {ContainerDetailMovie} from './moviesInfoStyle';
+import {ContainerDetailMovie, ContainerDetailSec, TextDiv} from './moviesInfoStyle';
 import Loading from '../../components/Loading';
+import HeaderStyledComponent from '../../components/HeaderMain/HeaderMain';
+import SidebarStyledComponent from '../../components/Sidebar';
 import ButtonAddFavorite from '../../components/ButtonFavorites/index';
 import Thumb from '../../assets/images/thumb.svg';
 
@@ -38,17 +41,26 @@ export default function DetailsMovie(props) {
   return (
     <>
       { notFound && <Redirect to="/not-found" /> }
+      <SidebarStyledComponent />
+       <HeaderStyledComponent />
       {loading && <Loading /> }
       { details ?
-          <section>
-            <h1><BiCameraMovie /> {details.Title} ({details.Year})</h1>
-            <h2>{details.Genre}</h2>
+          <ContainerDetailSec>
+            <TextDiv>
+              <MdMovieFilter size={30} style={{marginTop: '5px', marginRight: '6px', color: '#650315',}}/> {details.Title} ({details.Year})
+            </TextDiv>
+              
             <ContainerDetailMovie>
+             <div className="img-col">
+                <img src={(details.Poster === 'N/A') ? Thumb : details.Poster} alt={details.Title} />
+                <h2>{details.imdbRating} <BsStarFill/> | {details.imdbVotes} <small>Votes</small></h2>
+              </div>
               <ButtonAddFavorite movie={details} />
-              <div className="col-1">
-                  <h2>Plot <span className='badge'>{details.Type}</span></h2>
-                  <p style={{fontStyle: 'italic', fontWeight: 'bold'}}>{details.Plot}</p>
 
+              <div className="col-2">
+                  <h2>{details.Genre}</h2> 
+                  <h2>Plot {details.Type}</h2>
+                  <p style={{fontStyle: 'italic', fontWeight: 'bold'}}>{details.Plot}</p>
                   <p><span className="label-details"><CgAwards /> Awards:</span> {details.Awards} </p>
                   <p><span className="label-details"><BiPencil /> Writer:</span> {details.Writer} </p>
                   <p><span className="label-details"><GiDirectorChair /> Director:</span> {details.Director} </p>
@@ -59,12 +71,9 @@ export default function DetailsMovie(props) {
                   <p><span className="label-details"><BiWorld /> Country:</span> {details.Country} </p>
                   <p><span className="label-details"><MdNewReleases /> Released:</span> {details.Released} </p>
               </div>
-              <div className="col-2">
-                <img src={(details.Poster === 'N/A') ? Thumb : details.Poster} alt={details.Title} />
-                <h2>{details.imdbRating} <BsStarFill/> | {details.imdbVotes} <small>Votes</small></h2>
-              </div>
+
             </ContainerDetailMovie>      
-          </section>
+          </ContainerDetailSec>
       : ''}
     </>
   )

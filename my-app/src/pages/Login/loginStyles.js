@@ -29,10 +29,9 @@ export const LoginText = styled.span`
 
 export const InputText = styled.span`
     display: flex;
-    flex-direction: column;
-    font-size: 0.8em;
+    font-size: 1em;
     width: 100%;
-    margin: 6px 0em 0px 5em;
+    padding-left: 5rem;
 `
 
 export const InputLogin = styled.input`
@@ -45,12 +44,13 @@ export const InputLogin = styled.input`
     border-radius: 4px;
     font-size: 0.8em;
     padding: 8px;
-    margin-top: 4px;
+    margin-top: 3px;
+    margin-bottom: 1rem;
     background-color: #F9E9C1;
 `
 export const ButtonStyle = styled.button`
     color: white;
-    font-size: 0.7em;
+    font-size: 0.9em;
     width: 76%;
     height: 75%;
     background-color: #008C49;

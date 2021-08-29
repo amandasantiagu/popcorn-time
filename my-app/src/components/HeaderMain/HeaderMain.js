@@ -1,8 +1,7 @@
 import React from 'react'
-import {  HeaderProf, InputLogin, Pipocando, MainStyle, ButtonSearch, AlignItems } from './HeaderMainStyles'
+import {  HeaderProf, Pipocando, MainStyle,} from './HeaderMainStyles'
 import logo from '../../assets/images/pipoca.png'
 import {ImExit} from 'react-icons/im'
-import {BiSearch} from 'react-icons/bi'
 
 const HeaderStyledComponent = () => {
     return (

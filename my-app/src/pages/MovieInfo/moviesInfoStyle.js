@@ -1,43 +1,44 @@
 import styled from 'styled-components';
 
+export const ContainerDetailSec = styled.section`
+    width: auto;
+    height: auto;
+    background-color: #F9E9C1;
+    min-height: 100vh;
+    margin-left: 3.5rem;
+    max-width: 100vw;
+    
+`
+export const TextDiv = styled.div`
+    display: flex;
+    width: 100%;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 600;    
+    padding-top: 1rem;
+`
+
 export const ContainerDetailMovie = styled.div`
-    display:grid;
+    display:flex;
     height: 100%;
-    grid-template-columns: 2fr 1fr 1fr;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
 
-    @media(max-width: 1400px){
-    grid-template-columns: 2fr 1fr;
-
-    }
-    @media(max-width: 650px){
-      grid-template-columns: 1fr;  
-      .col-1{
-        order: 2;
-
-      }
-      .col-2{
-        order: 1;
-      }
+    .col-2{
+      padding-right: 4rem;
+      width: 100%;
     }
 
-    h2{
-      position: relative;
+    .img-col{
+      width: auto;
+      padding-left: 8rem;
+      padding-right: 4rem;
+      padding-top: 1.7rem;
     }
 
-    .col-1{
-      padding-right: 15px;
-    }
-
-    .badge{
-      background-color: var(--color-theme);
-      color: #fff;
-      font-weight: 500;
-      padding: 0 10px;
-      float:right;
-      position:absolute;
-      right: 0;
-      text-transform: uppercase;
-    }
     .label-details{
       color: var(--color-theme);
       font-weight: 400;

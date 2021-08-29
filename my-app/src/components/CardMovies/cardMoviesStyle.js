@@ -2,17 +2,15 @@ import styled from 'styled-components';
 
 export const ContainerMovies = styled.div`
     margin-top: 2em;
+    margin-left: 1.3em;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 30px;
-
 `;
 
 export const Card = styled.article`
-
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, .1); */
   transition: transform ease-in-out .5s;
-  background-color: #fff;
+  color: #ab1a49;
   position: relative;
   filter: blur(1);
   overflow: hidden;
@@ -38,12 +36,14 @@ export const Card = styled.article`
 
   .card-content h2{
     font-size: 1.1em;
+    color: white;
   }
   .card-content p{
     line-height: 38px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: white;
   }
   .card-content p span svg{
     margin-right: 10px;
@@ -53,13 +53,12 @@ export const Card = styled.article`
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
   }
   .card-content{
-      padding: 15px;
-      height: 141px;
       position: absolute;
       bottom: -141px;
-      background: #fff;
+      background-color: #a5152fdb;
       width: 100%;
       transition: all .4s;
       left: 0;

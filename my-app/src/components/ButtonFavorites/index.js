@@ -13,8 +13,8 @@ export default function ButtonAddFavorite({movie, isFavorite}) {
 
   const handleAddToFavorites = (movie) =>{
     if(isFavorite){
-      toast.dark('This Movie is Favorite! =D', {
-        position: "top-right",
+      toast.error('This Movie is Favorite!', {
+        position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -27,8 +27,9 @@ export default function ButtonAddFavorite({movie, isFavorite}) {
     
     setClicked(!clicked);
     dispatch(addFavorite(movie));
-    toast.dark('Added to Favorites! =D', {
-      position: "top-right",
+    toast("Add movie in Favorites", {
+      position: "bottom-right",
+      style: {background: "#650315db", color: 'white'},
       autoClose: 5000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -37,6 +38,7 @@ export default function ButtonAddFavorite({movie, isFavorite}) {
       progress: undefined,
     });
   }
+
   return (
     <>
        <BtnAddFavorite className="btn-favorite" onClick={() => handleAddToFavorites(movie)}>

@@ -19,7 +19,8 @@ const Login = () => {
                  justifyContent: 'center'}}>
                     <ButtonStyle> ENTRAR </ButtonStyle>
                 </Link>
-                <InputText>Não possui Conta?</InputText>
+                    <InputText>Não possui Conta? <Link to={'/register'}>Criar Conta</Link>
+                    </InputText>
             </CardLogin>
         </LoginStyle>
         </>

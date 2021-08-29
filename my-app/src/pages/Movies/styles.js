@@ -4,23 +4,9 @@ export const ContainerFormSearch = styled.div`
     background-color: #F9E9C1;
     width: auto;
     height: auto;
-    /* display: flex; */
     min-height: 100vh;
     margin-left: 3.5rem;
     max-width: 100vw;
-
-
-    @media(max-width: 450px){
-        input[type='search']:focus,
-        input[type='search']{
-            width: 90%;
-        }
-        button{
-            width: 90%;
-            height: 40px;
-            margin-top: 10px;
-        }
-    }
 `;
 
 export const AlignItems = styled.div`
@@ -46,7 +32,7 @@ export const InputLogin = styled.input`
     background-color: #F9E9C1;
 `
 export const ButtonSearch = styled.button`
-    width: 8%;
+    width: 10%;
     height: 5%;
     align-items: center;
     justify-content: center;
@@ -57,5 +43,17 @@ export const ButtonSearch = styled.button`
     display: flex;
     padding: 5px ;
     margin-top: 1rem;
+`
+export const Results = styled.h1`
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 5px ;
+    margin-top: 1rem;
+`
 
+export const ResultsFor = styled.h2`
+    align-items: center;
+    justify-content: center;
+    display: flex;
 `
