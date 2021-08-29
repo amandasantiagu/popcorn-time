@@ -15,6 +15,7 @@ import Register from './pages/Register';
 import Movies from './pages/Movies';
 import Favorites from './pages/Favorites';
 import Dashboard from './pages/Dashboard';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const MovieInfo = Loadable({

@@ -7,7 +7,8 @@ const Home = () => {
     return (
         <>   
             <SidebarStyledComponent />
-            <HeaderStyledComponent />     
+            <HeaderStyledComponent />    
+            
         </>
     )
 }

@@ -9,6 +9,7 @@ const Profile = () => {
             <SidebarStyledComponent />
             <HeaderStyledComponent />
             <ProfileStyle></ProfileStyle>
+           
         </>
     )
 }

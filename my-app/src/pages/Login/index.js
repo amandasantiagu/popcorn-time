@@ -16,7 +16,7 @@ const Login = () => {
                 <InputText> Senha </InputText>             
                 <InputLogin type="password" />
                 <Link to={'/home'} style={{width: '100%', display: 'flex', alignItems: 'center',
-                 justifyContent: 'center'}}>
+                 justifyContent: 'center', textDecoration: 'none'}}>
                     <ButtonStyle> ENTRAR </ButtonStyle>
                 </Link>
                     <InputText>Não possui Conta? <Link to={'/register'}>Criar Conta</Link>
