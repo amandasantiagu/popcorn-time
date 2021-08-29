@@ -14,7 +14,9 @@ const SidebarStyledComponent = () => {
             <SidebarStyle>
                 <ButtonsDiv>
                     <ButtonsSidebar>
-                        <RiHomeHeartLine size={30} style={{color: '#F9E9C1'}} />
+                        <Link to={'/home'}>
+                            <RiHomeHeartLine size={30} style={{color: '#F9E9C1'}} />
+                        </Link>
                     </ButtonsSidebar>
                     <ButtonsSidebar>
                         <Link to={'/favorites'}>

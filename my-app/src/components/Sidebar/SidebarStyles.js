@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SidebarStyle = styled.div`
     height: 100%;
-    width: 13vh;
+    width: 10vh;
     background-color: #650315;
     display: flex;
     flex-direction: column;

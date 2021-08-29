@@ -19,6 +19,7 @@ export const CardLogin = styled.div`
     width: 25%;
     height: 80%;
     border-radius: 4px;
+
 `
 export const LoginText = styled.span`
     font-size: 1.5em;
@@ -42,7 +43,7 @@ export const InputLogin = styled.input`
     width: 70%;
     border: 2px solid #D97777;
     border-radius: 4px;
-    font-size: 0.4em;
+    font-size: 0.8em;
     padding: 8px;
     margin-top: 4px;
     background-color: #F9E9C1;
@@ -50,10 +51,10 @@ export const InputLogin = styled.input`
 export const ButtonStyle = styled.button`
     color: white;
     font-size: 0.7em;
-    width: 100%;
-    height: 70%;
+    width: 76%;
+    height: 75%;
     background-color: #008C49;
-    margin-top: 12px;
+    margin-top: 16px;
     margin-bottom: 12px;
     border-radius: 4px;
     border: 2px solid #008C49;

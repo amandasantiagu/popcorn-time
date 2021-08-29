@@ -12,7 +12,7 @@ export const Card = styled.article`
 
   /* box-shadow: 0 0 10px rgba(0, 0, 0, .1); */
   transition: transform ease-in-out .5s;
-  /* background-color: #fff; */
+  background-color: #fff;
   position: relative;
   filter: blur(1);
   overflow: hidden;
@@ -38,7 +38,6 @@ export const Card = styled.article`
 
   .card-content h2{
     font-size: 1.1em;
-    background: red; 
   }
   .card-content p{
     line-height: 38px;

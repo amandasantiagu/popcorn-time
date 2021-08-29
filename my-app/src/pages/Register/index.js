@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/images/pipoca.png'
 import { ButtonStyle, CardLogin, InputLogin, InputText, LoginStyle, LoginText } from '../Login/loginStyles'
 
@@ -12,7 +13,10 @@ const Register = () => {
                 <InputLogin type="text" />
                 <InputText> Cadastre uma senha</InputText>             
                 <InputLogin type="password" />
-                <ButtonStyle> PRÓXIMO </ButtonStyle>
+                <Link to={'/home'} style={{width: '100%', display: 'flex', alignItems: 'center',
+                 justifyContent: 'center'}}>
+                    <ButtonStyle> PRÓXIMO </ButtonStyle>
+                </Link>
                 <InputText>Já possui conta?</InputText>
             </CardLogin>
         </LoginStyle>

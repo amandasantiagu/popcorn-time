@@ -15,7 +15,8 @@ const Login = () => {
                 <InputLogin type="text" />
                 <InputText> Senha </InputText>             
                 <InputLogin type="password" />
-                <Link to={'/favorites'}>
+                <Link to={'/home'} style={{width: '100%', display: 'flex', alignItems: 'center',
+                 justifyContent: 'center'}}>
                     <ButtonStyle> ENTRAR </ButtonStyle>
                 </Link>
                 <InputText>Não possui Conta?</InputText>

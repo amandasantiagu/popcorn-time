@@ -14,6 +14,7 @@ import Profile from './pages/Profile';
 import Register from './pages/Register';
 import Movies from './pages/Movies';
 import Favorites from './pages/Favorites';
+import Dashboard from './pages/Dashboard';
 
 
 const MovieInfo = Loadable({
@@ -40,7 +41,8 @@ function App() {
         <div className="page-content">
           <Switch>
               <Route exact path="/login" component={Login} />
-              <Route exact path="/" component={Home} />
+              <Route exact path="/" component={Dashboard} />
+              <Route exact path="/home" component={Home} />
               <Route path="/profile" component={Profile} />
               <Route path="/movies" component={Movies} />
               <Route path="/register" component={Register} />
