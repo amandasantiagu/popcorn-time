@@ -5,13 +5,14 @@ import { Link } from 'react-router-dom'
 
 
 const Login = () => {
+
     return (
         <>
         <LoginStyle>
             <CardLogin>
                 <img src={logo} alt="Logo" style={{width: '25%', marginBottom: '12px'}}/>
                 <LoginText>Faça seu Login</LoginText>
-                <InputText> Email</InputText>
+                <InputText > Email</InputText>
                 <InputLogin type="text" />
                 <InputText> Senha </InputText>             
                 <InputLogin type="password" />
