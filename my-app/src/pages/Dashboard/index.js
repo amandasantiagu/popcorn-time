@@ -2,7 +2,6 @@ import React from 'react'
 import { ButtonLogin, ButtonRegister, Header, DashboardStyled, HeaderDiv } from './DashboardStyles'
 import logo from '../../assets/images/pipoca.png'
 import { Link } from 'react-router-dom'
-import CustomCarousel from '../../components/CustomCarousel'
 
 const Dashboard = () => {
     return (
@@ -19,8 +18,6 @@ const Dashboard = () => {
                         </Link>  
                     </HeaderDiv>
                 </Header>
-
-                <CustomCarousel />
             </DashboardStyled>
 
         </>

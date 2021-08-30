@@ -41,7 +41,7 @@ export const ButtonSearch = styled.button`
     border-left-width: 0px;
     border-radius: 0px 4px 4px 0px;
     display: flex;
-    padding: 5px ;
+    padding: 2px ;
     margin-top: 1rem;
 `
 export const Results = styled.h1`

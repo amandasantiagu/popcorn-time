@@ -7,7 +7,7 @@ export const MainStyle = styled.main`
     display: flex;
 `
 export const HeaderProf = styled.header`
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     background-color: #650315;
     display: flex;
