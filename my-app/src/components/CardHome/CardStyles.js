@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
-export const MainDiv = styled.main`
-    color: black;
-    font-weight: 600;
-`
-export const StyledP = styled.p`
-    color: black;
-    font-weight: 600;
-`
+
 export const CardsStyled = styled.div`
-    width: 20%;
-    height: 40%;
-    background-color: black;
+    width: auto;
+    height: auto;
+    background-color: white;
+    display: flex;
+
+    .img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 150px;
+    }
+
 `
