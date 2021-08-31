@@ -14,7 +14,7 @@ const Register = () => {
                 <InputText> Cadastre uma senha</InputText>             
                 <InputLogin type="password" />
                 <Link to={'/home'} style={{width: '100%', display: 'flex', alignItems: 'center',
-                 justifyContent: 'center'}}>
+                 justifyContent: 'center', textDecoration: 'none'}}>
                     <ButtonStyle> PRÓXIMO </ButtonStyle>
                 </Link>
                     <InputText>Já possui conta?
