@@ -1,13 +1,19 @@
 import styled from 'styled-components';
 
-export const LoginStyle = styled.main`
-    width: 100vw;
-    height: 100vh;
+export const LoginStyle = styled.div`
+    width: auto;
+    height: auto;
+    min-width: 100vw;
+    min-height: 100vh;
     background-color: #650315;
     display: flex;
     align-items: center;
     align-self: center;
-    justify-content: center;
+    
+    @media (min-width:768px){
+        justify-content: center;
+    }
+    
 `
 export const CardLogin = styled.div`
     display: flex;
@@ -16,11 +22,10 @@ export const CardLogin = styled.div`
     justify-content: center;
     background-color: #F9E9C1;
     flex-direction: column;
-    width: 25%;
-    height: 80%;
+    width: 23rem;
+    height: 35rem;
     border-radius: 4px;
-
-`
+  `
 export const LoginText = styled.span`
     font-size: 1.5em;
     margin-bottom: 12px;

@@ -31,9 +31,8 @@ const NotFound = Loadable({
 
 function App() {
   return (
-    <div className="Movies-app">
+    <>
       <Router>
-        <div className="page-content">
           <Switch>
               <Route exact path="/login" component={Login} />
               <Route exact path="/" component={Dashboard} />
@@ -45,10 +44,9 @@ function App() {
               <Route path="/favorites" component={Favorites} />
               <Route path="*" component={NotFound} />
           </Switch>
-        </div>
       </Router>
       <ToastContainer />
-    </div>
+</>
   );
 }
 
