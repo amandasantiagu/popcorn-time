@@ -7,8 +7,9 @@ export const MainStyle = styled.main`
     display: flex;
 `
 export const HeaderProf = styled.header`
-    width: 100vw;
+    width: auto;
     height: 10vh;
+    min-width: 100vw;
     background-color: #650315;
     display: flex;
     align-items: center;

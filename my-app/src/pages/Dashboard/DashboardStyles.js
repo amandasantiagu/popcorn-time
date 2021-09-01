@@ -16,7 +16,7 @@ export const HeaderDiv = styled.div`
 `
 
 export const Header = styled.header`
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     background-color: #650315;
     display: flex;

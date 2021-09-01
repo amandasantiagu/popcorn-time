@@ -13,7 +13,7 @@ const Profile = () => {
 
             <ProfileStyle>
                 <ProfileTitle>
-                        <WiStars size={50} style={{color: '#650315'}}/>
+                    <WiStars size={50} style={{color: '#650315'}}/>
                         PERFIL
                 </ProfileTitle>
                 <ProfileMainContainer>

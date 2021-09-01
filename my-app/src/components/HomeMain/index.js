@@ -8,10 +8,10 @@ const HomeMain = () => {
         <>
        <div>
         <RowStyle>
-            <img src={mvnews1} />
+            <img src={mvnews1} alt="mvNews1"/>
         </RowStyle>
         <RowStyle>
-            <img src={mvnews2} />
+            <img src={mvnews2} alt="mvNews2"/>
         </RowStyle>
        </div>
         </>

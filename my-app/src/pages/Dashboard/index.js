@@ -9,7 +9,7 @@ const Dashboard = () => {
         <>
             <DashboardStyled> 
                 <Header>
-                    <img src={logo} alt="Logo" style={{width: '4%', height: '80%', paddingLeft: '12px',  paddingTop: '5px'}}/>
+                    <img src={logo} alt="Logo" style={{width: 'auto', height: '80%', paddingLeft: '12px',  paddingTop: '5px'}}/>
                     <HeaderDiv>
                         <Link to={'/login'} >
                             <ButtonLogin>ENTRAR</ButtonLogin>

@@ -9,7 +9,7 @@ const HeaderStyledComponent = () => {
         <>
             <MainStyle>
                 <HeaderProf>
-                    <img src={logo} alt="Logo" style={{width: '3.5%', height:'75%', paddingLeft: '0.5rem' }}/>
+                    <img src={logo} alt="Logo" style={{width: 'auto', height:'75%', paddingLeft: '0.5rem' }}/>
                     <Pipocando> Hora da Pipoca </Pipocando>
                     <Link to={'/'}>
                         <ImExit size={40} style={{color: '#e48f93' , paddingRight: '3rem',}} /> 
