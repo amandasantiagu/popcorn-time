@@ -20,8 +20,7 @@ const Login = () => {
                  justifyContent: 'center', textDecoration: 'none'}}>
                     <ButtonStyle> ENTRAR </ButtonStyle>
                 </Link>
-                    <InputText>Não possui Conta? <Link to={'/register'}>Criar Conta</Link>
-                    </InputText>
+                   Não possui Conta? <Link to={'/register'}>Criar Conta</Link>                
             </CardLogin>
         </LoginStyle>
         </>

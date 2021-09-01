@@ -24,12 +24,6 @@ const MovieInfo = Loadable({
 });
 
 
-// const Favorites = Loadable({
-//   loader: () => import('./pages/Favorites'),
-//   loading: Loading,
-//   delay: 60
-// });
-
 const NotFound = Loadable({
   loader: () => import('./pages/404'),
   loading: Loading

@@ -17,9 +17,9 @@ const Register = () => {
                  justifyContent: 'center', textDecoration: 'none'}}>
                     <ButtonStyle> PRÓXIMO </ButtonStyle>
                 </Link>
-                    <InputText>Já possui conta?
+                    Já possui conta?
                         <Link to={'/login'}>Entrar</Link>
-                    </InputText>
+                   
             </CardLogin>
         </LoginStyle>
     )
