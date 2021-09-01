@@ -1,11 +1,18 @@
 import React from 'react'
-
+import mvnews1 from '../../assets/images/mvnews1.png'
+import mvnews2 from '../../assets/images/mvnews2.png'
+import {RowStyle} from './HomeMainStyle'
 const HomeMain = () => {
 
     return (
         <>
        <div>
-        <p> -- API DE NOVIDADES DE FILMES -- </p>
+        <RowStyle>
+            <img src={mvnews1} />
+        </RowStyle>
+        <RowStyle>
+            <img src={mvnews2} />
+        </RowStyle>
        </div>
         </>
     )

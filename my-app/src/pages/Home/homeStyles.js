@@ -29,7 +29,7 @@ export const HomeMainContainer = styled.div`
     margin-left: 3.5rem;
 `
 export const HomeNews = styled.div`
-    width: 500px;
+    width: 480px;
     height: 500px;
     margin-left: 0.5rem;
     margin-top: 0.5rem;
