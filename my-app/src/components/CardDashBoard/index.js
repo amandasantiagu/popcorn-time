@@ -20,11 +20,9 @@ import poster26 from '../../assets/images/poster26.jpg'
 import poster27 from '../../assets/images/poster27.jpg'
 import poster28 from '../../assets/images/poster28.jpg'
 import poster29 from '../../assets/images/poster29.jpg'
-import { Pipocando } from '../HeaderMain/HeaderMainStyles'
 
 
 const CardStyledComponent = () => {
-
     return (
         <>
             <CardsStyled >

@@ -1,22 +1,41 @@
 import React from 'react'
-import poster1 from '../../assets/images/poster1.jpg'
-import poster2 from '../../assets/images/poster2.jpg'
-import poster3 from '../../assets/images/poster3.jpg'
-import poster4 from '../../assets/images/poster4.jpg'
+import poster20 from '../../assets/images/poster20.jpg'
+import poster31 from '../../assets/images/poster31.jpg'
+import poster14 from '../../assets/images/poster14.jpg'
+import poster23 from '../../assets/images/poster23.jpg'
+import poster18 from '../../assets/images/poster18.jpg'
+import poster8 from '../../assets/images/poster8.jpg'
+import poster9 from '../../assets/images/poster9.jpg'
+import poster10 from '../../assets/images/poster10.jpg'
+import poster12 from '../../assets/images/poster12.jpg'
+import poster19 from '../../assets/images/poster19.jpg'
+import poster24 from '../../assets/images/poster24.jpg'
+import { CardsStyled } from '../CardDashBoard/CardStyles'
 
 
 const CardStyled = () => {
 
     return (
         <>
-       <div>
+           <h1> Os filmes mais favoritados da semana!</h1>
+       <CardsStyled > 
+            <img src={poster20} alt="poster20" className="img"/>
+            <img src={poster31} alt="poster31"  className="img"/>
+            <img src={poster14} alt="poster14"  className="img"/>
+            <img src={poster23} alt="poster23"  className="img"/>
+            <img src={poster18} alt="poster18"  className="img"/>
+            <img src={poster8} alt="poster8"  className="img"/>
+            </CardsStyled>
 
-            <img src={poster1} alt="poster1" className="img"/>
-                    <img src={poster2} alt="poster2"  className="img"/>
-                    <img src={poster3} alt="poster3"  className="img"/>
-                    <img src={poster4} alt="poster4"  className="img"/>
-       </div>
-        </>
+            <h1>Lançamentos do Mes!</h1>
+            <CardsStyled >
+                    <img src={poster9} alt="poster17" className="img"/>
+                    <img src={poster10} alt="poster18"  className="img"/>
+                    <img src={poster12} alt="poster19"  className="img"/>
+                    <img src={poster19} alt="poster20"  className="img"/>
+                    <img src={poster24} alt="poster21"  className="img"/>
+            </CardsStyled>
+       </>
     )
 }
 

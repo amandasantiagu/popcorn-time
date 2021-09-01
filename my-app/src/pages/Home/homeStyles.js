@@ -35,7 +35,7 @@ export const HomeNews = styled.div`
     margin-top: 0.5rem;
 
     border-style: dotted;
-    border-size: 1px;
+    border-width: 1px;
     border-color: red;
 `
 export const HomeRankings = styled.div`
@@ -46,6 +46,6 @@ export const HomeRankings = styled.div`
     margin-top: 0.5rem;
 
     border-style: dotted;
-    border-size: 1px;
+    border-width: 1px;
     border-color: red;
 `

@@ -2,7 +2,7 @@ import React from 'react'
 import { ButtonLogin, ButtonRegister, Header, DashboardStyled, HeaderDiv } from './DashboardStyles'
 import logo from '../../assets/images/pipoca.png'
 import { Link } from 'react-router-dom'
-import CardStyledComponent from '../../components/CardHome'
+import CardStyledComponent from './../../components/CardDashBoard/index'
 
 const Dashboard = () => {
     return (

@@ -18,8 +18,8 @@ const Home = () => {
                     <WiStars size={50} style={{color: '#650315'}}/>
                     Bem Vindo, -username-!
                 </HomeTitle>
-
-                <HomeMainContainer>
+                <CardStyled />
+                {/* <HomeMainContainer>
 
                     <HomeNews>
                         <HomeMain />
@@ -29,7 +29,7 @@ const Home = () => {
                         <HomeRankList />
                     </HomeRankings>
 
-                </HomeMainContainer> 
+                </HomeMainContainer>  */}
             </HomeStyle>
             
         </>
