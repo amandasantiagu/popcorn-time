@@ -10,6 +10,7 @@ export const FavoriteStyle = styled.div`
     max-width: 100vw;
 `
 export const FavoritesDiv = styled.span`
+    margin-left: 0.5rem;
     font-size: 1.6rem;
     font-weight: 500;
     height: auto;
