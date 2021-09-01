@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerMovies = styled.div`
     margin-top: 2em;
-    margin-left: 1.3em;
+    margin-left: 2.3em;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 30px;
@@ -35,6 +35,7 @@ export const Card = styled.article`
   }
 
   .card-content h2{
+    margin-left: 0.5em;
     font-size: 1.1em;
     color: white;
   }

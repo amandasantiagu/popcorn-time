@@ -43,10 +43,10 @@ const Movies =  () => {
         <AlignItems>
           <InputLogin 
           value={searchText} 
-          placeholder="Tytle Movie.."
+          placeholder="Movie Title.."
           onChange={handleChangeTextSearch}/>
             <ButtonSearch onClick={() => HandleLoadMoviesByTitle(searchText)}>
-                <BiSearch style={{marginRight: '5px'}} size={15} /> Click Search
+                <BiSearch style={{marginRight: '5px'}} size={15} /> Search
             </ButtonSearch> 
         </AlignItems>
         {(searchText.length > 0) ? <ResultsFor> <MdMovieFilter size={28} style={{color: '#650315', paddingRight: '0.6rem', marginTop: '5px'}} /> Results for "{searchText}":</ResultsFor> : ''}
