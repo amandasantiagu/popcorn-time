@@ -13,6 +13,10 @@ export const HeaderDiv = styled.div`
     text-decoration: none;
     margin-right: 2rem;
 
+    @media (max-width:768px){ 
+        width:auto
+    }
+
 `
 
 export const Header = styled.header`
@@ -25,8 +29,8 @@ export const ButtonLogin = styled.button`
     color: white;
     font-size: 1em;
     margin-top: 12px;
-    width: 100%;
-    height: 55%;
+    width: 7rem;
+    height: 2rem;
     background-color: transparent;
     border: 0px;
     padding-left: 1rem; 
@@ -34,12 +38,19 @@ export const ButtonLogin = styled.button`
     font-weight: 600;
     letter-spacing: 0.6px;
     border: 1px solid white;
+
+    @media (max-width:768px){ 
+        font-size: 0.8em;
+        width: 8rem;
+        height: 2rem;
+        margin-left: 1rem
+    }
 `
 export const ButtonRegister = styled.button`
     color: white;
     font-size: 1em;
-    width: 100%;
-    height: 55%;
+    width: 7rem;
+    height: 2rem;
     background-color: green;
     margin-top: 12px;
     margin-right: 12px;
@@ -48,4 +59,10 @@ export const ButtonRegister = styled.button`
     border: 0px solid white;
     font-weight: 600;
     letter-spacing: 0.6px;
+    
+    @media (max-width:768px){ 
+        font-size: 0.8em;
+        width: 8rem;
+        height: 2rem;
+    }
 `

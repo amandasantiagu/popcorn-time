@@ -11,13 +11,14 @@ import poster12 from '../../assets/images/poster12.jpg'
 import poster19 from '../../assets/images/poster19.jpg'
 import poster24 from '../../assets/images/poster24.jpg'
 import { CardsStyled } from '../CardDashBoard/CardStyles'
+import { H1div } from './CardStyleds'
 
 
 const CardStyled = () => {
 
     return (
         <>
-           <h1> Os filmes mais favoritados da semana!</h1>
+           <H1div> Os filmes mais favoritados da semana!</H1div>
        <CardsStyled > 
             <img src={poster20} alt="poster20" className="img"/>
             <img src={poster31} alt="poster31"  className="img"/>
@@ -27,7 +28,7 @@ const CardStyled = () => {
             <img src={poster8} alt="poster8"  className="img"/>
             </CardsStyled>
 
-            <h1>Lançamentos do Mes!</h1>
+            <H1div>Lançamentos do Mes!</H1div>
             <CardsStyled >
                     <img src={poster9} alt="poster17" className="img"/>
                     <img src={poster10} alt="poster18"  className="img"/>

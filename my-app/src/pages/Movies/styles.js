@@ -30,6 +30,13 @@ export const InputLogin = styled.input`
     margin-left: 3rem;
     margin-top: 1rem;
     background-color: #F9E9C1;
+
+    @media (max-width:768px){ 
+        width: 7rem;
+        align-items: center;
+        display: flex;
+        margin-left: 0;
+    }
 `
 export const ButtonSearch = styled.button`
     width: 10%;
@@ -43,6 +50,9 @@ export const ButtonSearch = styled.button`
     display: flex;
     padding: 5px ;
     margin-top: 1rem;
+    @media (max-width:768px){ 
+        width: 5rem;
+    }
 `
 export const Results = styled.h1`
     align-items: center;

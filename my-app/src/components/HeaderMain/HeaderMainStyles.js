@@ -15,6 +15,11 @@ export const HeaderProf = styled.header`
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+    @media (max-width:768px){ 
+        width: 6rem;
+        padding: 3px;
+        font-size: 0.9em;
+    }
 `
 
 export const Pipocando = styled.div`

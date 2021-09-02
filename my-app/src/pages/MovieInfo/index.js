@@ -9,7 +9,7 @@ import {GiDirectorChair} from 'react-icons/gi';
 import {MdAssignmentTurnedIn, MdNewReleases} from 'react-icons/md';
 import {FaUsers} from 'react-icons/fa';
 import {CgTimelapse} from 'react-icons/cg';
-import {ContainerDetailMovie, ContainerDetailSec, TextDiv} from './moviesInfoStyle';
+import {ContainerDetailMovie, ContainerDetailSec, h2Div, TextDiv} from './moviesInfoStyle';
 import Loading from '../../components/Loading';
 import HeaderStyledComponent from '../../components/HeaderMain/HeaderMain';
 import SidebarStyledComponent from '../../components/Sidebar';
@@ -52,8 +52,8 @@ export default function DetailsMovie(props) {
               
             <ContainerDetailMovie>
              <div className="img-col">
-                <img src={(details.Poster === 'N/A') ? Thumb : details.Poster} alt={details.Title} />
-                <h2>{details.imdbRating} <BsStarFill/> | {details.imdbVotes} <small>Votes</small></h2>
+                <img className="img-col" src={(details.Poster === 'N/A') ? Thumb : details.Poster} alt={details.Title} />
+                <h2 className="img-col">{details.imdbRating} <BsStarFill/> | {details.imdbVotes} <small>Votes</small></h2>
               </div>
               <ButtonAddFavorite movie={details} />
 

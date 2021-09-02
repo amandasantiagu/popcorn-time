@@ -12,7 +12,7 @@ const HeaderStyledComponent = () => {
                     <img src={logo} alt="Logo" style={{width: 'auto', height:'75%', paddingLeft: '0.5rem' }}/>
                     <Pipocando> Hora da Pipoca </Pipocando>
                     <Link to={'/'}>
-                        <ImExit size={40} style={{color: '#e48f93' , paddingRight: '3rem',}} /> 
+                        <ImExit size={30} style={{color: '#e48f93' , paddingRight: '3rem',}} /> 
                     </Link>
                 </HeaderProf>                
             </MainStyle>

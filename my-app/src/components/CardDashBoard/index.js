@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardsStyled } from './CardStyles'
+import { CardsDash, CardsStyled } from './CardStyles'
 import poster1 from '../../assets/images/poster1.jpg'
 import poster5 from '../../assets/images/poster5.jpg'
 import poster6 from '../../assets/images/poster6.jpg'
@@ -25,8 +25,9 @@ import poster29 from '../../assets/images/poster29.jpg'
 const CardStyledComponent = () => {
     return (
         <>
+        <CardsDash>
             <CardsStyled >
-                <h2>Aqui voce pode fazer um favorito de todos os generos de Filmes!</h2>
+                <h2 className="h2">Aqui voce pode fazer um favorito de todos os generos de Filmes!</h2>
             </CardsStyled>
             <CardsStyled >
                 <h2>Animação</h2>
@@ -68,6 +69,7 @@ const CardStyledComponent = () => {
                     <img src={poster28} alt="poster28"  className="img"/>
                     <img src={poster29} alt="poster29"  className="img"/>
             </CardsStyled>
+        </CardsDash>
         </>
     )}
 

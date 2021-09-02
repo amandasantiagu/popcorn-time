@@ -13,7 +13,25 @@ export const CardsStyled = styled.div`
         border-radius: 4px;
         padding: 5px;
         background-color: white;
-        width: 150px;
+        width: auto;
+        height: auto;
+        max-width: 10rem;
+
+    }
+
+    .h2{ 
+        padding: 3rem
+    }
+
+    @media (max-width:768px){ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
 `
+export const CardsDash = styled.div`
+    width: 100%;
+    height: auto;
+ `

@@ -30,6 +30,12 @@ export const ProfileMainContainer = styled.div`
     border-width: 3px;
     border-color: red;
     padding: 1rem;
+    @media (max-width:768px){ 
+        width: 15rem;
+        padding: 0px;
+        border-width: 0px;
+   
+    }
 `
 export const ProfileSelect = styled.select`
     display: flex;
@@ -44,6 +50,11 @@ export const ProfileSelect = styled.select`
     margin-top: 3px;
     margin-bottom: 1rem;
     background-color: #F9E9C1;
+    @media (max-width:768px){ 
+        width: 10rem;
+        padding: 3px;
+        font-size: 0.9em;
+    }
 `
 export const InputProfile = styled.input`
     display: flex;
@@ -58,4 +69,9 @@ export const InputProfile = styled.input`
     margin-top: 3px;
     margin-bottom: 1rem;
     background-color: #F9E9C1;
+    @media (max-width:768px){ 
+        width: 10rem;
+        padding: 3px;
+        font-size: 0.9em;
+    }
 `

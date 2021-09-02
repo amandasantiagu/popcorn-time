@@ -19,6 +19,10 @@ export const FavoritesDiv = styled.span`
     justify-content: flex-start;
     display: flex ;
     
+    @media (max-width:768px){ 
+        padding-left: 2rem;
+    }
+    
 `
 export const FavoritesList = styled.h1`
     text-align: center;
@@ -28,6 +32,11 @@ export const FavoritesList = styled.h1`
     align-items: center;
     justify-content: center;
     align-self: center;
+
+    @media (max-width:768px){ 
+        padding-left: 2rem;
+        font-size: 1rem;
+    }
 `
 export const FavoritesListStyles = styled.span`
     align-items: center;

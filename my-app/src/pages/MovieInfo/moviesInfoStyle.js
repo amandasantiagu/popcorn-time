@@ -7,7 +7,10 @@ export const ContainerDetailSec = styled.section`
     min-height: 100vh;
     margin-left: 3.5rem;
     max-width: 100vw;
-    
+    @media (max-width:768px){ 
+      display: flex;
+      flex-direction: column;
+    }
 `
 export const TextDiv = styled.div`
     display: flex;
@@ -18,7 +21,16 @@ export const TextDiv = styled.div`
     font-size: 1.8rem;
     font-weight: 600;    
     padding-top: 1rem;
+
+    @media (max-width:768px){ 
+      font-size: 0.8rem;
+    }
 `
+export const h2Div= styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    `
 
 export const ContainerDetailMovie = styled.div`
     display:flex;
@@ -26,6 +38,10 @@ export const ContainerDetailMovie = styled.div`
     width: 100%;
     justify-content: center;
     margin-top: 2rem;
+
+    @media (max-width:768px){ 
+        flex-direction: column;
+    }
 
     .col-2{
       padding-right: 4rem;
@@ -37,6 +53,12 @@ export const ContainerDetailMovie = styled.div`
       padding-left: 8rem;
       padding-right: 4rem;
       padding-top: 1.7rem;
+      @media (max-width:768px){ 
+        width: 85%;
+        padding-left: 1rem;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
     }
 
     .label-details{
@@ -44,9 +66,18 @@ export const ContainerDetailMovie = styled.div`
       font-weight: 400;
       display: flex;
       align-items: center;
+
+      @media (max-width:768px){ 
+        font-size: 1em;
+    }
+
       svg{
-        margin-right: .5em;
+        margin-right: 0.5em;
         font-size: 1.5em;
+        @media (max-width:768px){ 
+        width: 80%;
+        font-size: 1em;
+    }
       }
     }
 
