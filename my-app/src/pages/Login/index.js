@@ -3,30 +3,63 @@ import { ButtonStyle, CardLogin, InputLogin, InputText, LoginStyle, LoginText } 
 import logo from '../../assets/images/pipoca.png'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import axios from 'axios';
+import { useHistory } from "react-router-dom";
+import Cookies from 'universal-cookie';
 
+export const Login = () => {
 
-const Login = () => {
+  let history = useHistory();
 
+    const [username, setUsername] = React.useState('');
     const [fieldValuePassword, setFieldValuePassword] = React.useState('');
-    const [fieldValueEmail, setFieldValueEmail] = React.useState('');
+    const [token, setToken] = React.useState('');
 
-    const handleBlurPassword = (e) => {
-        setFieldValuePassword(e.target.value);
-        if (e.target.value === null || e.target.value === undefined || e.target.value === '' ){
-            toast.error('Voce precisa colocar um valor no Password!')  
-        }
-       
-    console.log(fieldValuePassword);
-}
+    const cookies = new Cookies();
 
-    const handleBlurEmail = (e) => {
-        setFieldValueEmail(e.target.value);
-        if (e.target.value === null || e.target.value === undefined || e.target.value === '' ){
-            toast.error('Voce precisa colocar um valor no Email!') 
-        }
+   const submitLogin = () => { 
+        axios.post('https://powerful-garden-24200.herokuapp.com/login/', new URLSearchParams({
+            username: username, //gave the values directly for testing
+            password: fieldValuePassword ,
+          }))
+            .then((response) => {
+                setToken(response.data.access_token)
+                if(response.data.access_token) {
+                  cookies.set('myToken', response.data.access_token)
+                  history.push("/home");
+                }                  
+            })
+            .then((data) => {
+              console.log("Success:", data)
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              toast.error('Senha ou usuario Invalidos') 
+            });
+    }
+    
+
+
+//     const [fieldValuePassword, setFieldValuePassword] = React.useState('');
+//     const [fieldValueEmail, setFieldValueEmail] = React.useState('');
+
+//     const handleBlurPassword = (e) => {
+//         setFieldValuePassword(e.target.value);
+//         if (e.target.value === null || e.target.value === undefined || e.target.value === '' ){
+//             toast.error('Voce precisa colocar um valor no Password!')  
+//         }
        
-    console.log(fieldValueEmail);
-}
+//     console.log(fieldValuePassword);
+// }
+
+//     const handleBlurEmail = (e) => {
+//         setFieldValueEmail(e.target.value);
+//         if (e.target.value === null || e.target.value === undefined || e.target.value === '' ){
+//             toast.error('Voce precisa colocar um valor no Email!') 
+//         }
+       
+//     console.log(fieldValueEmail);
+// }
 
     return (
         <>
@@ -36,15 +69,16 @@ const Login = () => {
                 <LoginText>Faça seu Login</LoginText>
 
                 <InputText > Email </InputText>
-                <InputLogin type="text" onBlur={handleBlurEmail}/>
+                <InputLogin id="email" type="text" onChange={(e) => setUsername(e.target.value)} />
 
                 <InputText> Senha </InputText>             
-                <InputLogin type="password" onBlur={handleBlurPassword}/>
+                <InputLogin id="senha" type="password" onChange={(e) => setFieldValuePassword(e.target.value)}/>
 
-                <Link to={'/home'} style={{width: '100%', display: 'flex', alignItems: 'center',
-                 justifyContent: 'center', textDecoration: 'none'}}>
-                    <ButtonStyle> ENTRAR </ButtonStyle>
-                </Link>
+
+                {username && fieldValuePassword ? 
+                      <ButtonStyle type="submit" onClick={() => submitLogin()} > ENTRAR </ButtonStyle>
+                 : <ButtonStyle disabled style={{backgroundColor:'#008c496b', color:'#008c496b' }}> ENTRAR </ButtonStyle> }                           
+
                    Não possui Conta? <Link to={'/register'}>Criar Conta</Link>                
             </CardLogin>
         </LoginStyle>
