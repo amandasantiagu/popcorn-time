@@ -57,7 +57,7 @@ export const ButtonStyle = styled.button`
     color: white;
     font-size: 0.9em;
     width: 76%;
-    height: 75%;
+    height: 2.4rem;
     background-color: #008C49;
     margin-top: 16px;
     margin-bottom: 12px;
