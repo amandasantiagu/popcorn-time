@@ -31,12 +31,26 @@ export const Login = () => {
             })
             .then((data) => {
               console.log("Success:", data)
+              fetch('https://powerful-garden-24200.herokuapp.com/users-me', {
+              method: 'GET',
+              headers: {
+              'Authorization': 'Bearer ' + cookies.get('myToken')
+            }
+    })
+      .then(function (response) {
+        console.log(response);
+        cookies.set('username', response.username)
+      }).catch(function (response) {
+        console.log(response);
+      });
             })
             .catch((error) => {
               console.error("Error:", error);
               toast.error('Senha ou usuario Invalidos') 
             });
     }
+
+  
     
 
 

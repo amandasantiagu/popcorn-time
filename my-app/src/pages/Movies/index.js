@@ -39,12 +39,17 @@ const Movies =  () => {
   // }
 
   const HandleLoadMoviesByTitle = () => {
-    axios.get(`${process.env.REACT_APP_API_OMD_BASE_URL}/movies?skip=0&limit=100&search=${searchText}`, { 
-      headers: new Headers({
-        'Authorization': 'Bearer '+cookies.get('myToken'), 
-        'Content-Type': 'application/x-www-form-urlencoded'
-      }), 
-    });
+    fetch(`https://powerful-garden-24200.herokuapp.com/movies?skip=0&limit=100&search=${searchText}`, {
+      method: 'GET',
+      headers: {
+        'Authorization': 'Bearer ' + cookies.get('myToken')
+      }
+    })
+      .then(function (response) {
+        console.log(response);
+      }).catch(function (response) {
+        console.log(response);
+      });
   }
   
   const handleChangeTextSearch = (e) => {

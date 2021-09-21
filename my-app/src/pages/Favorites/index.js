@@ -14,7 +14,6 @@ export default function Favorites() {
 
   return (
     <>
-      
         <SidebarStyledComponent />
           <HeaderStyledComponent />
         <FavoriteStyle> 
@@ -26,7 +25,6 @@ export default function Favorites() {
             {favorites.length ? <CardMovies movies={favorites} isFavorite={true}/> : <FavoritesList> You still don't have favorite movies! <FaRegSadTear size={23} style={{color: 'gray', paddingLeft: '12px'}} /></FavoritesList>}
           </FavoritesListStyles>
         </FavoriteStyle>
-      
     </>
   )
 }
