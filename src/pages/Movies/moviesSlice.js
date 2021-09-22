@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { fetchMovies } from '../../services/fetchApi';
-import {HandleLoadMoviesByTitle} from '../Movies'
 
 const initialState = {
   movies: [],
