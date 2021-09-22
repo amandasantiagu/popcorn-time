@@ -26,6 +26,7 @@ export const Login = () => {
                 setToken(response.data.access_token)
                 if(response.data.access_token) {
                   cookies.set('myToken', response.data.access_token)
+                  cookies.set('username', username)
                   history.push("/home");
                 }                  
             })
@@ -39,7 +40,6 @@ export const Login = () => {
     })
       .then(function (response) {
         console.log(response);
-        cookies.set('username', response.username)
       }).catch(function (response) {
         console.log(response);
       });
