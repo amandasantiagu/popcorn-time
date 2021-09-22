@@ -11,7 +11,6 @@ import Cookies from 'universal-cookie';
 
 import {
   selectMovies, 
-  loadMoviesAsync, 
   isLoading, 
   loadingState } from './moviesSlice';
 import { AiOutlineCloseSquare } from 'react-icons/ai';
@@ -19,37 +18,33 @@ import axios from 'axios';
 
 const Movies =  () => {
   const [searchText, setSearchText] = useState('');
+  const [valueMovie, setValueMovie] = useState([]);
   const loading = useSelector(isLoading);
 
   const {movies} = useSelector(selectMovies);
   const dispatch = useDispatch();  
 
   const cookies = new Cookies();
- 
-  //  const HandleLoadMoviesByTitle = () => {
-  //   let auth = (req, res, next) => {
-  //     if (req.headers.authorization === "Basic "+ cookies.get('myToken')) {
-  //       console.log(res)
-  //     } else {
-  //       res.status(401).json({ msg: "Não autorizado" })
-  //     }
-  //   }
-  //   fetch(`${process.env.REACT_APP_API_OMD_BASE_URL}/movies?skip=0&limit=100&search=${searchText}`, auth
-  //   )
-  // }
 
+  const toUpper = (str) => {
+    const arr = str.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+    }
+    const str2 = arr.join(" ");
+    return str2
+  }
+ 
   const HandleLoadMoviesByTitle = () => {
-    fetch(`https://powerful-garden-24200.herokuapp.com/movies?skip=0&limit=100&search=${searchText}`, {
-      method: 'GET',
+    axios.get(`https://powerful-garden-24200.herokuapp.com/movies?skip=0&limit=100&search=${toUpper(searchText)}`, {
       headers: {
         'Authorization': 'Bearer ' + cookies.get('myToken')
       }
-    })
-      .then(function (response) {
-        console.log(response);
-      }).catch(function (response) {
-        console.log(response);
-      });
+    }).then(response => response)
+      .then(data => 
+        {console.log(data)
+        setValueMovie(data.data)}
+      );
   }
   
   const handleChangeTextSearch = (e) => {
@@ -68,7 +63,7 @@ const Movies =  () => {
         <AlignItems>
           <InputLogin 
           value={searchText} 
-          placeholder="Movie Title.."
+          placeholder="search movie"
           onChange={handleChangeTextSearch}/>
             <ButtonSearch onClick={() => HandleLoadMoviesByTitle()}>
                 <BiSearch style={{marginRight: '5px'}} size={15} /> Search
@@ -76,11 +71,10 @@ const Movies =  () => {
         </AlignItems>
         {(searchText.length > 0) ? <ResultsFor> <MdMovieFilter size={28} style={{color: '#650315', paddingRight: '0.6rem', marginTop: '5px'}} /> Results for "{searchText}":</ResultsFor> : ''}
 
-       {(movies) ? <CardMovies movies={movies} /> : <Results><AiOutlineCloseSquare size={34} style={{color: 'gray', paddingRight: '12px', paddingTop: '4px'}} /> 0 Results </Results>  }
+       {(valueMovie) ? <CardMovies movies={valueMovie} /> : <Results><AiOutlineCloseSquare size={34} style={{color: 'gray', paddingRight: '12px', paddingTop: '4px'}} /> 0 Results </Results>  }
        {(loading) && <Loading /> }
       </ContainerFormSearch>
-      </>
-      
+      </>      
   )
 }
 

@@ -9,12 +9,14 @@ import {GiDirectorChair} from 'react-icons/gi';
 import {MdAssignmentTurnedIn, MdNewReleases} from 'react-icons/md';
 import {FaUsers} from 'react-icons/fa';
 import {CgTimelapse} from 'react-icons/cg';
-import {ContainerDetailMovie, ContainerDetailSec, h2Div, TextDiv} from './moviesInfoStyle';
+import {ContainerDetailMovie, ContainerDetailSec, TextDiv} from './moviesInfoStyle';
 import Loading from '../../components/Loading';
 import HeaderStyledComponent from '../../components/HeaderMain/HeaderMain';
 import SidebarStyledComponent from '../../components/Sidebar';
 import ButtonAddFavorite from '../../components/ButtonFavorites/index';
 import Thumb from '../../assets/images/thumb.svg';
+import axios from 'axios';
+import Cookies from 'universal-cookie';
 
 export default function DetailsMovie(props) {
   
@@ -33,10 +35,27 @@ export default function DetailsMovie(props) {
       setLoading(false)
     }
   }, [])
+
+  const cookies = new Cookies()
+  
+  const getMovieByID = () => {
+    let movieID = id
+    axios.get('https://powerful-garden-24200.herokuapp.com/movies/' + movieID, {
+      headers: {
+        'Authorization': 'Bearer ' + cookies.get('myToken')
+      }
+    }).then(response => response)
+      .then(data =>
+        {console.log(data)
+          setDetails({...data.data});
+          setLoading(false)}
+       
+      );
+  }
   
   useEffect(() => {
-    handleLoadMovie(id);
-  }, [handleLoadMovie, id])
+    getMovieByID(id)
+  }, [])
 
   return (
     <>
@@ -47,29 +66,28 @@ export default function DetailsMovie(props) {
       { details ?
           <ContainerDetailSec>
             <TextDiv>
-              <MdMovieFilter size={30} style={{marginTop: '5px', marginRight: '6px', color: '#650315',}}/> {details.Title} ({details.Year})
+              <MdMovieFilter size={30} style={{marginTop: '5px', marginRight: '6px', color: '#650315',}}/> {details.title} ({details.year})
             </TextDiv>
               
             <ContainerDetailMovie>
              <div className="img-col">
-                <img className="img-col" src={(details.Poster === 'N/A') ? Thumb : details.Poster} alt={details.Title} />
-                <h2 className="img-col">{details.imdbRating} <BsStarFill/> | {details.imdbVotes} <small>Votes</small></h2>
+                <img className="img-col" src={(details.poster === 'N/A') ? Thumb : details.poster} alt={details.title} />
+                <h2 className="img-col">{details.imdb_rating} <BsStarFill/> | {details.imdb_votes} <small>Votes</small></h2>
               </div>
               <ButtonAddFavorite movie={details} />
 
               <div className="col-2">
                   <h2>{details.Genre}</h2> 
                   <h2>Plot {details.Type}</h2>
-                  <p style={{fontStyle: 'italic', fontWeight: 'bold'}}>{details.Plot}</p>
-                  <p><span className="label-details"><CgAwards /> Awards:</span> {details.Awards} </p>
-                  <p><span className="label-details"><BiPencil /> Writer:</span> {details.Writer} </p>
-                  <p><span className="label-details"><GiDirectorChair /> Director:</span> {details.Director} </p>
-                  <p><span className="label-details"><MdAssignmentTurnedIn/> Production:</span> {details.Production} </p>
-                  <p><span className="label-details"><BiDollarCircle/> Box Office:</span> {details.BoxOffice} </p>
-                  <p><span className="label-details"><FaUsers /> Actors:</span> {details.Actors} </p>
-                  <p><span className="label-details"><CgTimelapse /> Run Time:</span> {details.Runtime} </p>
-                  <p><span className="label-details"><BiWorld /> Country:</span> {details.Country} </p>
-                  <p><span className="label-details"><MdNewReleases /> Released:</span> {details.Released} </p>
+                  <p style={{fontStyle: 'italic', fontWeight: 'bold'}}>{details.plot}</p>
+                  <p><span className="label-details"><CgAwards /> Awards:</span> {details.awards} </p>
+                  <p><span className="label-details"><BiPencil /> Writer:</span> {details.writer} </p>
+                  <p><span className="label-details"><GiDirectorChair /> Director:</span> {details.director} </p>
+                  <p><span className="label-details"><MdAssignmentTurnedIn/> Genre:</span> {details.genre} </p>
+                  <p><span className="label-details"><FaUsers /> Actors:</span> {details.actors} </p>
+                  <p><span className="label-details"><CgTimelapse /> Run Time:</span> {details.runtime_minutes} </p>
+                  <p><span className="label-details"><BiWorld /> Country:</span> {details.country} </p>
+                  <p><span className="label-details"><MdNewReleases /> Released:</span> {details.released} </p>
               </div>
 
             </ContainerDetailMovie>      

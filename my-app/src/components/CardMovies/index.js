@@ -11,22 +11,23 @@ function CardMovies({movies, isFavorite}) {
     <>
       <ContainerMovies>
         {movies && movies.map( movie => (
-          <Card key={movie.imdbID}>
-            <Link to={`/details/${movie.imdbID}`} >
+          <Card key={movie.id}>
+            <Link to={`/details/${movie.id}`} >
               <div className="card-thumb">
-                <img src={(movie.Poster === 'N/A') ? Thumb : movie.Poster} alt={movie.Title} />
+                <img src={(movie.poster === 'N/A') ? Thumb : movie.poster} alt={movie.title} />
               </div>
             </Link>
             <div className="card-content">
-              <Link to={`/details/${movie.imdbID}`} >
-                <h2>{movie.Title}</h2>
+              <Link to={`/details/${movie.id}`} >
+                <h2>{movie.title}</h2>
                 <p>
-                  <span><BiCameraMovie width={30}/> {movie.Type} </span> 
-                  <span><BiCalendarStar width={30} /> {movie.Year}</span>  
+                  <span><BiCameraMovie width={30}/> {movie.type} </span> 
+                  <span><BiCalendarStar width={30} /> {movie.year}</span>  
                 </p>
               </Link>
               </div>
               <ButtonAddFavorite movie={movie} isFavorite={isFavorite} />
+            
           </Card>
       ))}
       </ContainerMovies>

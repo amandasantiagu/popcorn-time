@@ -50,31 +50,6 @@ export const Login = () => {
             });
     }
 
-  
-    
-
-
-//     const [fieldValuePassword, setFieldValuePassword] = React.useState('');
-//     const [fieldValueEmail, setFieldValueEmail] = React.useState('');
-
-//     const handleBlurPassword = (e) => {
-//         setFieldValuePassword(e.target.value);
-//         if (e.target.value === null || e.target.value === undefined || e.target.value === '' ){
-//             toast.error('Voce precisa colocar um valor no Password!')  
-//         }
-       
-//     console.log(fieldValuePassword);
-// }
-
-//     const handleBlurEmail = (e) => {
-//         setFieldValueEmail(e.target.value);
-//         if (e.target.value === null || e.target.value === undefined || e.target.value === '' ){
-//             toast.error('Voce precisa colocar um valor no Email!') 
-//         }
-       
-//     console.log(fieldValueEmail);
-// }
-
     return (
         <>
         <LoginStyle>

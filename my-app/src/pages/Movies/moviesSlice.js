@@ -16,6 +16,7 @@ export const loadMoviesAsync = createAsyncThunk('movies/fetchMovies',
   }
 );
 
+
 export const moviesSlice = createSlice({
   name: 'movies',
   initialState,
