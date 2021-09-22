@@ -14,10 +14,6 @@ export const loadMoviesAsync = createAsyncThunk('movies/fetchMovies',
     if(response.data.Response === 'True'){
       return response.data.Search;
     }
-    // const response = await HandleLoadMoviesByTitle(`&s=${title}`);
-    // if(response.data.Response === 'True'){
-    //   return response.data.Search;
-    // }
   }
 );
 
